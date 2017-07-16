@@ -1,8 +1,11 @@
-import express from 'express';
+/* import express from 'express';
 import path  from 'path';
-import open from 'open';
-const port=5000;
-const app=express();
+import open from 'open'; */
+var  express= require('express');
+var  path = require('path');
+var  open =require( 'open');
+var  port=5000;
+var  app=express();
 app.get('/', function(req,res){
 
   res.sendfile(path.join(__dirname,'../src/index.html'));
