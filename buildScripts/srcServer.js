@@ -1,17 +1,20 @@
-/* import express from 'express';
+import express from 'express';
 import path  from 'path';
 import open from 'open';
+import webpack from 'webpack';
+import config from '../webpack.config.dev';
 const  port=5000;
-const  app=express();*/
+const  app=express();
 
-var  express= require('express');
+/*var  express= require('express');
 var  path = require('path');
-var  open =require( 'open');
+var  open =require('open');
+
 var webpack= require('webpack');
 var config =require('../webpack.config.dev');
 var  port=5000;
-var  app=express();
-var compiler=webpack(config);
+var  app=express();*/
+const compiler= webpack(config);
 app.use(require('webpack-dev-middleware')(compiler,{
   noInfo:true,
   publicpath: config.output.publicpath
