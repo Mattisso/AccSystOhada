@@ -1,4 +1,5 @@
- import path from 'path';
+import webpack from 'webpack'; 
+import path from 'path';
 
 export default {
  // debug: true,
@@ -17,7 +18,7 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
-      {test: /\.css$/, loaders: ['style','css']}
+      {test: /\.css$/, loaders: ['style-loader','css-loader']}
     ]
   }
 }
