@@ -4,13 +4,14 @@
   "description": " System Ohada by Mensah Attisso",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:scr",
+    "start": "npm-run-all --parallel security-check open:scr lint:watch ",
     "open:scr": "babel-node buildScripts/srcServer.js",
-    "lint" : "esw webpack.config.* src buildScripts",
+    "lint" : "esw webpack.config.* src buildScripts --color",
     "security-check": "nsp check",
     "localtunnel": "lt --port 5000",
-    "share": "npm-run-all --parallel open:scr localtunnel"
-  },
+    "share": "npm-run-all --parallel open:scr localtunnel",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
+   },
   "author": "Mensah Attisso",
   "license": "MIT",
   "dependencies": {},
