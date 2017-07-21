@@ -1,7 +1,8 @@
 import {expect} from 'chai';
 import jsdom from 'jsdom';
-import fs  from 'fs';
+//import fs  from 'fs';
 const {JSDOM} = jsdom;
+
 
 describe('Our first test', () => {
     it('should pass', ()=>{
@@ -11,13 +12,22 @@ describe('Our first test', () => {
 
 
 describe('index.html', () => {
-  it('should have h1 that says Users', (done) => {
-    const index = ( new JSDOM('./src/index.html', "utf-8")).window.document;
+  it('should say hello', () => {
+const virtualConsole = new jsdom.VirtualConsole();
+const dom = new JSDOM(`./src/index.html`, { virtualConsole });
+virtualConsole.on("error", (done) => { 
+  const h1 = dom.window.document.getElementsByTagName('h1')[0];
+ expect(h1.innerHTML).to.equal("Hellow World!");
+    done();
+      dom.window.close();
+});
+    /* const index = fs.readFileSync('./src/index.html', "utf-8");
 
-      const h1 = (new JSDOM(index.getElementsByName('h1'))).window.document;
-      expect(h1.innerHTML).to.equal(index.innerHTML);
-      done();
+    jsdom.VirtualConsole(index, function(err, window) {
+      const h1 = window.document.getElementsByTagName('h1')[0];
+      expect(h1.innerHTML).to.equal("Hellow World!");
+     done();
       window.close();
-
+    }); */
   });
 });
