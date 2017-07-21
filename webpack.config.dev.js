@@ -1,8 +1,8 @@
  import path from 'path';
 export default {
-  debug: true,
+ // debug: true,
   devtool: 'inline-source-map',
-  noInfo: false,
+  watch: false,
   entry: [
     path.resolve(__dirname, 'src/index')
   ],
@@ -15,8 +15,8 @@ export default {
   plugins: [ ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+      {test: /\.css$/, loaders: ['style-loader','css-loader']}
     ]
   }
 }
