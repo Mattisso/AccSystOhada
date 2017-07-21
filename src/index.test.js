@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import jsdom from 'jsdom';
 import fs  from 'fs';
-
+const {JSDOM} = jsdom;
 
 describe('Our first test', () => {
     it('should pass', ()=>{
@@ -12,12 +12,12 @@ describe('Our first test', () => {
 
 describe('index.html', () => {
   it('should have h1 that says Users', (done) => {
-    const index = fs.readFileSync('./src/index.html', "utf-8");
-    jsdom.env(index, function(err, window) {
-      const h1 = window.document.getElementsByTagName('h1')[0];
-      expect(h1.innerHTML).to.equal("Users");
+    const index = ( new JSDOM('./src/index.html', "utf-8")).window.document;
+
+      const h1 = (new JSDOM(index.getElementsByName('h1'))).window.document;
+      expect(h1.innerHTML).to.equal(index.innerHTML);
       done();
       window.close();
-    });
-  })
-})
+
+  });
+});
