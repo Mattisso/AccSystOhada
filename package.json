@@ -19,7 +19,9 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "deploy": "surge ./dist"
+
   },
   "author": "Mensah Attisso",
   "license": "MIT",
@@ -54,6 +56,7 @@
     "open": "0.0.5",
     "rimraf": "2.6.1",
     "style-loader": "0.18.2",
+    "surge": "0.19.0",
     "webpack": "3.3.0",
     "webpack-dev-middleware": "1.11.0",
     "webpack-hot-middleware": "2.18.2",
