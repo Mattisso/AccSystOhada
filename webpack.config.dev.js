@@ -23,13 +23,6 @@ export default {
    ],
   module: {
    
-        preLoaders: [
-            {
-                test: /\.js$/, // include .js files 
-                exclude: /node_modules/, // exclude any and all files in the node_modules folder 
-                loader: "jshint-loader"
-            }
-        ]  ,
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
       {test: /\.css$/, loaders: ['style-loader','css-loader']}
