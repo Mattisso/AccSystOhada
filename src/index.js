@@ -1,4 +1,6 @@
 import  './index.css';
+import '../css/bootstrap.css';
+import '../css/app.css';
 import {getUsers, deleteUser} from './api/userApi';
 
 // Populate table of users via API call.
@@ -15,7 +17,6 @@ getUsers().then(result => {
       </tr>`
   });
  global.document.getElementById('users').innerHTML = usersBody;
-
 
  const deleteLinks = global.document.getElementsByClassName('deleteUser');
 

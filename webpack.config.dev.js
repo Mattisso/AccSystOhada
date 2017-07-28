@@ -24,6 +24,8 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+      {test:/\.(png|ttf|svg|woff|eot)$/,
+      loader:'file-loader'},
       {test: /\.css$/, loaders: ['style-loader','css-loader']}
     ]
   }
