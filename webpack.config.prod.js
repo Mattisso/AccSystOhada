@@ -49,13 +49,15 @@ export default {
       trackJSToken: '8f003f95d4824d7fba2434b3f72e15c6'
     }),
     // Eliminate duplicate packages when generating bundle
-    new webpack.optimize.DedupePlugin(),
+  //  new webpack.optimize.DedupePlugin(),
      // Minify JS
     new webpack.optimize.UglifyJsPlugin()
    ],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+       {test:/\.(png|ttf|svg|woff|eot)$/, exclude: /node_modules/,
+      loader:'file-loader'},
        {test: /\.css$/, use: ExtractTextPlugin.extract({
          fallback:'style-loader', use:'css-loader'})}
      // {test: /\.css$/, loaders: ['style-loader','css-loader']}

@@ -1,4 +1,4 @@
-import  './index.css';
+//import  './index.css';
 import '../css/bootstrap.css';
 import '../css/app.css';
 import {getUsers, deleteUser} from './api/userApi';
