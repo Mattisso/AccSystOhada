@@ -1,0 +1,19 @@
+{
+
+        "Id": 1,
+        "oExercComptaId": 2006,
+        "oTableauPosteId": 1,
+         "oReferenceId": 87,
+         "TotalSoldeDebit" : 121200,
+         "TotalSoldeCredit": 12200,
+         "nttCompteBalanceDetails": [
+                {
+                    "Id": 0,
+                    "nttCompteBalanceId": 1,
+                    "NumCompte": "4520",
+                    "IntitulCompte": "my testAgain",
+                    "SoldeDebit": 1520000,
+                    "SoldeCredit": 0
+                }
+            ]              
+    }
