@@ -57,7 +57,7 @@ export default {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
        {test:/\.(png|ttf|svg|woff|eot)$/, exclude: /node_modules/,
-      loader:'file-loader'},
+     loader:'url-loader?limit=10000'},
        {test: /\.css$/, use: ExtractTextPlugin.extract({
          fallback:'style-loader', use:'css-loader'})}
      // {test: /\.css$/, loaders: ['style-loader','css-loader']}

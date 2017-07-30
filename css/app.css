@@ -1,13 +1,33 @@
-﻿body {
+﻿body { font-family: sans-serif;
     padding-top: 50px;
     padding-bottom: 20px;
 }
-body{
-    font-family: sans-serif;
-}
+
 table th{
     padding: 5px
 }
 .navbar {
      background-image: linear-gradient(to bottom,#23007c 0,#000C0C 100%);
 }
+
+.bg_header_img {
+    background: url('../images/webpack_logo.png') -131px 1px no-repeat;
+    margin-right: 15px;
+    height: 150px;
+    width: 150px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+@font-face {
+    font-family: 'glyphicons';
+
+    /* These can be loaded thanks to the url-loader */
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.svg');
+    src: url('../fonts/glyphicons-halflings-regular.ttf');
+    src: url('../fonts/glyphicons-halflings-regular.woff');
+}
+

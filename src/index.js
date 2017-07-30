@@ -1,6 +1,15 @@
 //import  './index.css';
 import '../css/bootstrap.css';
 import '../css/app.css';
+//import '../js/app.js';
+
+var img = document.createElement('img');
+img.style.height = "25%";
+img.style.width = "25%";
+img.src = require('../images/webpack_logo.png');
+
+document.getElementById('img_container').appendChild(img);
+
 import {getUsers, deleteUser} from './api/userApi';
 
 // Populate table of users via API call.

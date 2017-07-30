@@ -14,7 +14,7 @@ describe('index.html', () => {
   it('should have h1 that says Users', (done) => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
 const dom = new JSDOM(index).window;
-  const h1 = dom.window.document.getElementsByTagName('h1')[0];
+  const h1 = dom.window.document.getElementsByTagName('h1')[1];
  expect(h1.innerHTML).to.equal("Users");
     done();
       dom.window.close();
