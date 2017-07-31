@@ -1,4 +1,8 @@
-  [  {
+  {
+    
+    "oStableauPoste":
+    [ 
+       {
     "Id": 13100,
     "StableauName": "tblBilanActif",
     "StbleauLongName": "Bilan Actif"
@@ -38,3 +42,5 @@
     "StableauName": "tblChifAffair",
     "StbleauLongName": "Chiffre d'Affair"
   }]
+  }
+  

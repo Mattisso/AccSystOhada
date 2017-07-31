@@ -7,13 +7,14 @@
     "use strict";
 
 
-    var oTableauPoste = function (TableauName, tbleauLongName) {
+    var oTableauPoste = function (Id, TableauName, tbleauLongName) {
        // var exits = {};
         var oStableauPostes = [];
       //  var challenges = {};
 
-        this.addoStableauPoste = function (oStableauName, StbleauLongName) {
+        this.addoStableauPoste = function (Id,oStableauName, StbleauLongName) {
             oStableauPostes.push({
+                "Id": Id,
                 "oStableauName":oStableauName,
                 "StbleauLongName": StbleauLongName
             });
@@ -23,7 +24,7 @@
 
         this.getData = function () {
             var data = {
-               // "Id":Id,
+               "Id":Id,
                 "TableauName": TableauName,
                 "tbleauLongName": tbleauLongName,
                 "oStableauPostes": oStableauPostes.slice()

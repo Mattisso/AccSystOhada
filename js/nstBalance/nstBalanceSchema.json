@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "nstBalance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "number"
+          },
+          "oReferenceId": {
+            "type": "number"
+          },
+          "oCompteId": {
+            "type": "number"
+          },
+          "oExercComptaId": {
+            "type": "number"
+          },
+          "oTableauPosteId": {
+            "type": "number"
+          },
+          "IntitulCompte": {
+            "type": "string"
+          },
+          "NumCompte": {
+            "type": "string"
+          },
+          "SoldeDebit": {
+            "type": "number"
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "SoldeCredit": {
+            "type": "number"
+            "minimum": 0,
+            "exclusiveMinimum": true
+          }
+        },
+        "required": [
+          "Id",
+          "oReferenceId",
+          "oCompteId",
+          "oExercComptaId",
+          "oTableauPosteId",
+          "IntitulCompte",
+          "NumCompte",
+          "SoldeDebit",
+          "SoldeCredit"
+        ]
+      }
+    }
+  }
+}
