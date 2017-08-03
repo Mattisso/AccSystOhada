@@ -1,0 +1,36 @@
+{
+  "oTableauPoste": 
+[ 
+    {
+      "Id": "13000",
+      "TableauName": "tblActif",
+      "tbleauLongName": "Bilan Actif"
+    },
+    {
+      "Id": "50000",
+      "TableauName": "tblResultat",
+      "tbleauLongName": "Résultat"
+    },
+    {
+      "Id": "14000",
+      "TableauName": "tblCharges",
+      "tbleauLongName": "Résultat Charges"
+    },
+    {
+      "Id": "15000",
+      "TableauName": "tblProduidts",
+      "tbleauLongName": "Résultat Produits"
+    },
+    {
+      "Id": "52000",
+      "TableauName": "tblChifAffair",
+      "tbleauLongName": "Chiffre d'Affair"
+    },
+    {
+      "Id": "60000",
+      "TableauName": "tblTafire",
+      "tbleauLongName": "TAFIRE"
+    }
+  ]
+}
+  

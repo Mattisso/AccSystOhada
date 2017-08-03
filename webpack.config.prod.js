@@ -49,7 +49,7 @@ export default {
       trackJSToken: '8f003f95d4824d7fba2434b3f72e15c6'
     }),
     // Eliminate duplicate packages when generating bundle
-    new webpack.optimize.DedupePlugin(),
+   // new webpack.optimize.DedupePlugin(),
      // Minify JS
     new webpack.optimize.UglifyJsPlugin()
    ],
