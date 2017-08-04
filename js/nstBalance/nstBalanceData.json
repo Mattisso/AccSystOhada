@@ -1,0 +1,39 @@
+{   
+    "nstBalance":
+    [ 
+       {
+         "Id":1,
+  "oReferenceId":2,
+  "oCompteId":2,
+  "oExercComptaId":2006,
+  "oTableauPosteId":2,
+ "IntitulCompte":"Matériel Pédagogique",
+ "NumCompte":"244820",
+ "SoldeDebit": 0,
+ "SoldeCredit" :0
+  },
+ {
+  "Id":2,
+  "oReferenceId":10,
+  "oCompteId":12,
+  "oExercComptaId":2006,
+  "oTableauPosteId":2,
+ "IntitulCompte":"Matériel Pédagogique",
+ "NumCompte":"24440",
+ "SoldeDebit": null,
+ "SoldeCredit" :0
+  },
+ {
+  "Id":2,
+  "oReferenceId":10,
+  "oCompteId":12,
+  "oExercComptaId":2006,
+  "oTableauPosteId":2,
+ "IntitulCompte":"Matériel Pédagogique",
+ "NumCompte":"24440",
+ "SoldeDebit": 0,
+ "SoldeCredit" :null
+  }
+]
+  }
+    
