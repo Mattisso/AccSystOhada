@@ -1,8 +1,6 @@
 //import  './index.css';
 import '../css/bootstrap.css';
 import '../css/app.css';
-import '../css/bootstrap-theme.css';
-import '../js/bootstrap.js';
 
 //import '../js/app.js';
 

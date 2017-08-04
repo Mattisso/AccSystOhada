@@ -16,5 +16,15 @@
 
 import fetch from 'whatwg-fetch';
 import '../css/bootstrap.css';
-import '../css/bootstrap-theme.css';
-import '../js/bootstrap.js';
+
+global.jquery= require('jquery');
+
+/*
+require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+
+    var $ = require("jquery")(window);
+});*/
