@@ -1,23 +1,15 @@
-﻿// fitnessApp.nttCompteBalance
-var ohaCompteBalance = (function () {
+
+// fitnessApp.nttCompteBalance
+var ohanstBalance = (function () {
 
     "use strict";
    
-    var nttCompteBalance = function (Id, oExercComptaId, oTableauPosteId, oReferenceId) {    
-
-        var nttCompteBalanceDetails = [];
-        var nttCompteBalanceDetail = {};
+    var nstBalance = function (Id, oExercComptaId, oTableauPosteId, oReferenceId,IntitulCompte,NumCompte,SoldeDebit,SoldeCredit) {    
+      var nttCompteBalanceDetails = [];
         var DetailCount = 0;
         var TotalSoldeDebit = 0;
         var TotalSoldeCredit = 0;
-        nttCompteBalanceDetail = {
-
-            Id: 0,
-            NumCompte: "",
-            IntitulCompte: "",
-            SoldeDebit: "",
-            SoldeCredit: ""   
-        };
+        
 
 
         this.addBalanceDetail = function (Id, nttCompteBalanceId, NumCompte, IntitulCompte, SoldeDebit, SoldeCredit) {
@@ -32,7 +24,7 @@ var ohaCompteBalance = (function () {
 
             TotalSoldeDebit += SoldeDebit;
             TotalSoldeCredit += SoldeCredit;
-            DetailCount = nttCompteBalanceDetails.length;
+            DetailCount =nstBalance.length;
 
             return {
                 TotalSoldeDebit: TotalSoldeDebit,
@@ -98,9 +90,9 @@ var ohaCompteBalance = (function () {
 
 
 //Test the constructor at the console prompt:
-/*var nttcomptebalance = new ohaCompteBalance.nttCompteBalance(2, 87, 2007, 1)
+var nttcomptebalance = new ohaCompteBalance.nttCompteBalance(2, 87, 2007, 1)
 nttcomptebalance.addBalanceDetail(0, 2, "58520", "Mensah", 90000, 0)
 nttcomptebalance.addBalanceDetail(0, 2, "456200", "Mensah1", 1500000, 0)
 console.log(nttcomptebalance.getData())
 console.log(nttcomptebalance.getData().TotalSoldeDebit)
-console.log(nttcomptebalance.getData().TotalSoldeCredit)*/
+console.log(nttcomptebalance.getData().TotalSoldeCredit)

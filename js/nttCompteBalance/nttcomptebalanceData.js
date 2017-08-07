@@ -1,19 +1,8 @@
-﻿// Get Programming with JavaScript
-// Chapter 16
-// User data
-//var nttCompteBalanceData =
-
-
-
-(function () {
+﻿// User data
+var odaCompteBalanceData = (function () {
     "use strict";
 
-
-    if (window.fitnessApp === undefined) {
-        window.fitnessApp = {};
-    }
-
-    fitnessApp.nttcomptebalanceData = {
+  var   nttcomptebalanceData = [{
 
         "Id": 1,
         "oExercComptaId": 2006,
@@ -40,11 +29,13 @@
                         "SoldeCredit": 0                 
                     }
             ]
-    };
-
+    }];
+return {
+    nttcomptebalanceData: nttcomptebalanceData
+};
    
 })();
-
+odaCompteBalanceData();
 
 //var nttCompteBalanceData = {
 //    "Id": 1,
@@ -74,8 +65,12 @@
 //            }
 //    ]
 //};
+
+
+/*var nttcomptebalance = odaCompteBalanceData();
 //var nttcomptebalance = BuildnttCompteBalance(nttCompteBalanceData);
-
-
+console.log(nttcomptebalance);
+*/
+//console.log(odaCompteBalanceData.nttcomptebalanceData(nttcomptebalanceData));
 
 //console.log(nttcomptebalance.addBalanceDetail(0, 1, "707000", "IamTired", 660000, 0, "ObjectState"));

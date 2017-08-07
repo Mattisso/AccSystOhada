@@ -8,12 +8,23 @@
          "TotalSoldeCredit": 12200,
          "nttCompteBalanceDetails": [
                 {
-                    "Id": 0,
+                    "Id": 1,
                     "nttCompteBalanceId": 1,
                     "NumCompte": "4520",
                     "IntitulCompte": "my testAgain",
                     "SoldeDebit": 1520000,
                     "SoldeCredit": 0
-                }
+                },
+                
+       {
+              "Id": 2,
+              "nttCompteBalanceId": 1,
+               "NumCompte": "4520",
+                "IntitulCompte": "my Akoli",
+               "SoldeDebit": 1500000,
+               "SoldeCredit": 0
+            }
             ]              
     }
+
+    

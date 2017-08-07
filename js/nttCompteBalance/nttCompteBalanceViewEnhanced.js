@@ -1,7 +1,4 @@
-﻿// Uses spacer
-// fitnessApp.nttCompteBalanceViewEnhanced
-
-//var nttCompteBalanceViewEnhanced =
+﻿//var nttCompteBalanceViewEnhanced =
 
 (function () {
     "use strict";
