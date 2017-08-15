@@ -2,13 +2,15 @@ var express = require('express');
 var fs= require('fs');
 var path = require('path');
 var open = require('open');
+var ohaconvertbalancetojson = require('./ohaexceltojson').getworksheetData;
+var xlsx = require('xlsx');
  var port =3000;
     var app = express(); 
     var bodyParser = require('body-parser');
     var multer = require('multer');
      const destinationfolder =path.join(__dirname,'./ohadaimport/');
 
-     console.log(destinationfolder);
+    // console.log(destinationfolder);
     app.use(bodyParser.json());
 
     var storage = multer.diskStorage({ //multers disk storage settings
@@ -22,19 +24,22 @@ var open = require('open');
     });
 
     var upload = multer({ //multer settings
-                    storage: storage,
-                    fileFilter : function(req, file, callback) { //file filter
+                    storage: storage
+                   /*  fileFilter : function(req, file, callback) { //file filter
                         if (['xls', 'xlsx'].indexOf(file.originalname.split('.')[file.originalname.split('.').length-1]) === -1) {
                             return callback(new Error('Wrong extension type'));
                         }
                         callback(null, true);
-                    }
+                    } */
                 }).single('file');
 
    /** API path that will upload the files */
        app.post('/upload', function(req, res) {
-        var exceltojson; //Initialization
+           req.accepts(["json", "html", "text/plain"])
+             res.set('Content-Type','application/json');
+       // var ohaconvertbalancetojson; //Initialization
         upload(req,res,function(err){
+          
             if(err){
                  res.json({error_code:1,err_desc:err});
                  return;
@@ -44,29 +49,19 @@ var open = require('open');
                 res.json({error_code:1,err_desc:"No file passed"});
                 return;
             }
-            //start convert process
-            /** Check the extension of the incoming file and 
-             *  use the appropriate module
-             */
-       /*     if(req.file.originalname.split('.')[req.file.originalname.split('.').length-1] === 'xlsx'){
-                exceltojson = xlsxtojson;
-            } else {
-                exceltojson = xlstojson;
-            }
+           
             try {
-                exceltojson({
-                    input: req.file.path, //the same path where we uploaded our file
-                    output: null, //since we don't need output.json
-                   lowerCaseHeaders:true
-                }, function(err,result){
+                ohaconvertbalancetojson.getworksheetData(req.file.path)
+
+                , function(err,result){
                     if(err) {
                         return res.json({error_code:1,err_desc:err, data: null});
                     } 
-                    res.json({error_code:0,err_desc:null, data: result});
-                });
+                    res.json({error_code:0,err_desc:null, data: JSON.stringify(result)});
+                };
             } catch (e){
                 res.json({error_code:1,err_desc:"Corupted excel file"});
-            }*/
+            }
         });
     });
 

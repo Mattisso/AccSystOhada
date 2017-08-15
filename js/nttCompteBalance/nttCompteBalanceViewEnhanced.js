@@ -8,8 +8,8 @@
         var underline = newLine + spacer.line(28, "-") + newLine;
 
         var infoString = newLine + nttCompteBalanceData.oExercComptaId + " ";
-        infoString += nttCompteBalanceData.oTableauPosteId + "  ";
-        infoString += nttCompteBalanceData.oReferenceId + underline;
+        infoString += nttCompteBalanceData.oTablunderlineeauPosteId + "  ";
+        infoString += nttCompteBalanceData.oReferenceId + ;
         nttCompteBalanceData.nttCompteBalanceDetails.forEach(function (nttCompteBalanceDetail) {
             infoString += nttCompteBalanceDetail.NumCompte + "  ";
             infoString += nttCompteBalanceDetail.IntitulCompte + "  ";
