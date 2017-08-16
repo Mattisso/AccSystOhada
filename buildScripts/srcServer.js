@@ -20,6 +20,7 @@ app.get('/', function(req,res){
   res.sendfile(path.join(__dirname,'../src/index.html'));
 });
 
+
 app.get('/users', function(req, res) {
   // Hard coding for simplicity. Pretend this hits a real database
   res.json([
