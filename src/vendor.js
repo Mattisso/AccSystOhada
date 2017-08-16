@@ -15,8 +15,8 @@
 /* eslint-disable no-unused-vars */
 
 import fetch from 'whatwg-fetch';
-import '../css/bootstrap.css';
-import '../css/app.css';
+import '../public/css/bootstrap.css';
+import '../public/css/app.css';
 
 global.jquery= require('jquery');
 
