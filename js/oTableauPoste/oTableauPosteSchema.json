@@ -10,9 +10,9 @@
     "type": "object",    
     "properties": {
       "Id": {
-        "type": "string",
-        "minLength": 1,
-        "type": "integer"
+        "type": "number",
+        "minLength": 1
+      
       },
       "TableauName": {
         "type": "string",
@@ -22,11 +22,9 @@
         "type": "string",
         "minLength": 1
       },
-      "required": [
-      "Id",
-      "TableauName"
-      //"tbleauLongName"
-    ]
+      "required": ["Id",
+         "TableauName" ,
+         "tbleauLongName" ]
     }
   }
 }
