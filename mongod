@@ -1,1 +1,2 @@
-mongo ds137882.mlab.com:37882/ohadadb -u mattisso -p Coti0105
+mongod --pid=16348 --dbpath=data --nojournal host=localhost 
+mongod --dbpath "C:\Program Files\MongoDB\Server\3.2\data\db"
