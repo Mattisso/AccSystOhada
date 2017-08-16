@@ -16,6 +16,7 @@
 
 import fetch from 'whatwg-fetch';
 import '../css/bootstrap.css';
+import '../css/app.css';
 
 global.jquery= require('jquery');
 
