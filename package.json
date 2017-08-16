@@ -25,6 +25,7 @@
   "author": "Mensah Attisso",
   "license": "MIT",
   "dependencies": {
+    "generate-schema": "2.5.1",
     "jquery": "3.2.1",
     "whatwg-fetch": "2.0.3"
   },
